@@ -36,7 +36,7 @@ public class Employee
     
     private static void incrementNum()
     {
-	++employeeCount;
+	employeeCount++;
     }
     
     public static int getEmployeeCount()
