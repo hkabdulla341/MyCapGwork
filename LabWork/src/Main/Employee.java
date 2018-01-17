@@ -1,5 +1,7 @@
 package Main;
 
+import java.util.*;
+
 public class Employee
 {
     private int employeeID; // auto-generated
@@ -7,28 +9,30 @@ public class Employee
     private String lastName;
     private float salary;
     private char grade; // assumption A,B,C,..,Z
-    private String joiningDate;
+    private Date joiningDate;
     public static int employeeCount = 0;
 
     {
 	incrementNum();
     }
     
+    public Employee()
+    {
+	// Default constructor
+    }
     
     public Employee(int employeeID, String firstName, String lastName, float salary, char grade, String joiningDate)
     {
-	super();
 	this.employeeID = employeeID;
 	this.firstName = firstName;
 	this.lastName = lastName;
 	this.salary = salary;
 	this.grade = grade;
-	this.joiningDate = joiningDate;	
+	this.joiningDate = DateModder.getDate(joiningDate);
     }
     
     public Employee(int employeeID, String firstName, String lastName)
     {
-	super();
 	this.employeeID = employeeID;
 	this.firstName = firstName;
 	this.lastName = lastName;
@@ -99,12 +103,12 @@ public class Employee
         this.grade = grade;
     }
 
-    public String getJoiningDate()
+    public Date getJoiningDate()
     {
         return joiningDate;
     }
 
-    public void setJoiningDate(String joiningDate)
+    public void setJoiningDate(Date joiningDate)
     {
         this.joiningDate = joiningDate;
     }
