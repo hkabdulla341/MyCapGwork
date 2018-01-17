@@ -4,15 +4,26 @@ public class ContractEmployee extends Employee
 {
     private String contractor;
     private static int numberOfContrEmployee = 0;
+    
+    private double ratePerHr;
+    private int noOfHrWorked;
 
     {
 	incrementContEmpCount();
     }
 
-    public ContractEmployee(int employeeID, String firstName, String lastName, float salary, char grade,
-	    String joiningDate, String contractor)
+    public ContractEmployee(int employeeID, String firstName, String lastName, double ratePerHr, int noOfHrWorked, 
+	    char grade, String joiningDate, String contractor)
     {
-	super(employeeID, firstName, lastName, salary, grade, joiningDate);
+	super(employeeID, firstName, lastName);
+	
+	this.ratePerHr = ratePerHr;
+	this.noOfHrWorked = noOfHrWorked;
+	
+	super.setSalary(ratePerHr*noOfHrWorked);
+	super.setGrade(grade);
+	super.setJoiningDate(joiningDate);
+	
 	this.contractor = contractor;
     }
 

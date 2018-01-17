@@ -18,7 +18,7 @@ public class PermanentEmployee extends Employee
 	numberOfPermEmployee++;
     }
 
-    public PermanentEmployee(int employeeID, String firstName, String lastName, float salary, char grade,
+    public PermanentEmployee(int employeeID, String firstName, String lastName, double salary, char grade,
 	    String joiningDate)
     {
 	super(employeeID, firstName, lastName, salary, grade, joiningDate);
@@ -36,6 +36,6 @@ public class PermanentEmployee extends Employee
 
     public static void printTotalPermEmpoyee()
     {
-	System.out.println("Total Permernent employee created : " + getNumberOfPermEmployee());
+	System.out.println("Total Permanent employee created : " + getNumberOfPermEmployee());
     }
 }

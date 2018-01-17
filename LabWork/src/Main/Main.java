@@ -14,7 +14,7 @@ public class Main
 	Employee d = new Employee(Employee.getEmployeeCount()+1, "123", "456");
 	Employee.printTotalEmpoyee();
 	
-	Employee g = new ContractEmployee(Employee.getEmployeeCount()+1, "abc", "def", 2000, 'a', "01/01/2017", "Accenture");
+	Employee g = new ContractEmployee(Employee.getEmployeeCount()+1, "abc", "def",8.75,8,'a',"01/01/2017","Accenture");
 	ContractEmployee.printTotalConEmpoyee();
 	
 	Employee e = new PermanentEmployee(Employee.getEmployeeCount()+1, "abc", "def", 2000, 'a', "01/01/2017");
@@ -23,7 +23,7 @@ public class Main
 	Employee f = new PermanentEmployee(Employee.getEmployeeCount()+1, "abc", "def", 2000, 'a', "01/01/2017");
 	PermanentEmployee.printTotalPermEmpoyee();
 		
-	Employee h = new ContractEmployee(Employee.getEmployeeCount()+1, "abc", "def", 2000, 'a', "01/01/2017", "Capgemini");
+	Employee h = new ContractEmployee(Employee.getEmployeeCount()+1, "abc", "def", 8.75,8, 'a', "01/01/2017", "Capgemini");
 	ContractEmployee.printTotalConEmpoyee();
     }
 

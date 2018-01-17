@@ -7,7 +7,7 @@ public class Employee
     private int employeeID; // auto-generated
     private String firstName;
     private String lastName;
-    private float salary;
+    private double salary;
     private char grade; // assumption A,B,C,..,Z
     private Date joiningDate;
     public static int employeeCount = 0;
@@ -21,14 +21,16 @@ public class Employee
 	// Default constructor
     }
     
-    public Employee(int employeeID, String firstName, String lastName, float salary, char grade, String joiningDate)
+    public Employee(int employeeID, String firstName, String lastName, double salary, char grade, String joiningDate)
     {
 	this.employeeID = employeeID;
 	this.firstName = firstName;
 	this.lastName = lastName;
 	this.salary = salary;
 	this.grade = grade;
-	this.joiningDate = DateModder.getDate(joiningDate);
+	
+	setJoiningDate(joiningDate);
+	this.joiningDate = getJoiningDate();
     }
     
     public Employee(int employeeID, String firstName, String lastName)
@@ -83,12 +85,12 @@ public class Employee
         this.lastName = lastName;
     }
 
-    public float getSalary()
+    public double getSalary()
     {
         return salary;
     }
 
-    public void setSalary(float salary)
+    public void setSalary(double salary)
     {
         this.salary = salary;
     }
@@ -108,9 +110,10 @@ public class Employee
         return joiningDate;
     }
 
-    public void setJoiningDate(Date joiningDate)
+    public void setJoiningDate(String joiningDate)
     {
-        this.joiningDate = joiningDate;
+	Date setD = DateModder.getDate(joiningDate);
+        this.joiningDate = setD;
     }
     
     @Override
