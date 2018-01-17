@@ -14,24 +14,36 @@ public class MainRun
 	options.add("Display total employees created");
 	options.add("Exit");
 
-	char userOpt = Utility.optionsDisplayer(options);
+	char userOpt = 'a';
 	ArrayList<Employee> allEmployee = new ArrayList<>();
 
 	while (userOpt != 'z')
 	{
+	    userOpt = Utility.optionsDisplayer(options);
+	    
 	    switch (userOpt)
 	    {
 		case 'a':
 		    allEmployee.add(createNewEmployee());
+		    System.out.println("\nNew Employee Created.");
 		    break;
 		    
 		case 'b':
 		    
+		    for (Employee employee : allEmployee)
+		    {
+			employee.toString();
+			System.out.print(System.getProperty("line.separator"));
+		    }
+		    
 		    break;
 		    
 		case 'c':
+		    Employee.printTotalEmpoyee();
 		    break;
 	    }
+	    
+	    System.out.print(System.getProperty("line.separator"));
 	}
     }
 

@@ -1,5 +1,13 @@
 package Main;
 
+/*
+ * public static void printLine(int num)
+ * public static void printDoubleLine(int num)
+ * public static void printLine(int num, char pattern)
+ * public static char optionsDisplayer(ArrayList<String> option)
+ * 
+ */
+
 import java.util.ArrayList;
 
 public class Utility
