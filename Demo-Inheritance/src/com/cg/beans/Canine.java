@@ -8,7 +8,7 @@ abstract public class Canine extends Animal
 	System.out.println("instantiating Canine type....");
     }
 
-    // @Override
+    @Override
     public void roam()
     {
 	System.out.println("It is roaming in groups...");
@@ -16,4 +16,9 @@ abstract public class Canine extends Animal
 	// return ;
     }
 
+    @Override
+    abstract public void eat();
+
+    @Override
+    abstract public void sleep();
 }

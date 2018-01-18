@@ -4,19 +4,19 @@ abstract public class Feline extends Animal
 {
     public Feline()
     {
-	// TODO Auto-generated constructor stub
-	System.out.println("instantiating Feline type....");
+	System.out.println("Initalizing Feline...");
     }
+
+    @Override
+    abstract public void eat();
+
+    @Override
+    abstract public void sleep();
 
     @Override
     public void roam()
     {
-	// TODO Auto-generated method stub
-	felineRoam();
+	System.out.println("Feline Roam solo...");
     }
 
-    private void felineRoam()
-    {
-	System.out.println("Roam independently...");
-    }
 }
