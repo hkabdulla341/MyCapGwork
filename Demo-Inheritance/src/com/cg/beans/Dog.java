@@ -1,11 +1,13 @@
 package com.cg.beans;
 
-public class Dog extends Canine{
+import com.cg.specs.Pet;
 
-	@Override
+final public class Dog extends Canine implements Pet{
+
+	/*@Override
 	public void roam(){
 		roamInGroups();
-	}
+	}*/
 	
 	@Override
 	public void eat() {
@@ -21,5 +23,23 @@ public class Dog extends Canine{
 		System.out.println("It is roaming with a group");
 		
 	}
+	
+	@Override
+	public void beFriendly() {
+		System.out.println("Dog is friendly");
+	}
+	
+	@Override
+	public void play() {
+		System.out.println("Dog can play with you");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 }
