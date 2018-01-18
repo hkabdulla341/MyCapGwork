@@ -2,29 +2,10 @@ package Main;
 
 public class Contractor
 {
-    private ContractEmployee allContractsEmp[];
-    private static int countConEmployee = 0;
-    private int totalEmp = 4;
-    private int ratePerHr;
+    private String nameOfContractor;
 
-    public Contractor(int ratePerHr)
+    public Contractor(String nameOfContractor)
     {
-	this.ratePerHr = ratePerHr;
-	allContractsEmp = new ContractEmployee[totalEmp];
+	this.nameOfContractor = nameOfContractor;
     }
-
-    public void addConEmployee(ContractEmployee aConEmp)
-    {
-	if (countConEmployee < totalEmp)
-	{
-	    allContractsEmp[countConEmployee] = aConEmp;
-	    ++countConEmployee;
-	}
-    }
-    
-    public int getRatePerHr()
-    {
-	return ratePerHr;
-    }
-
 }

@@ -2,7 +2,7 @@ package Main;
 
 public class ContractEmployee extends Employee
 {
-    private String contractor;
+    private Contractor contractor;
     private static int numberOfContrEmployee = 0;
     
     private double ratePerHr;
@@ -13,7 +13,7 @@ public class ContractEmployee extends Employee
     }
 
     public ContractEmployee(int employeeID, String firstName, String lastName, double ratePerHr, int noOfHrWorked, 
-	    char grade, String joiningDate, String contractor)
+	    char grade, String joiningDate, Contractor contractor)
     {
 	super(employeeID, firstName, lastName);
 	
@@ -32,14 +32,14 @@ public class ContractEmployee extends Employee
 	++numberOfContrEmployee;
     }
     
-    public String getContractor()
+    public Contractor getContractor()
     {
 	return contractor;
     }
     
     public void setContractor(String contractor)
     {
-	this.contractor = contractor;
+	this.contractor = new Contractor(contractor);
     }
     
     public static int getNumberOfContrEmployee()

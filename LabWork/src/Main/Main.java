@@ -5,6 +5,8 @@ public class Main
 
     public static void main(String[] args)
     {
+	Contractor [] listOfContractor = {new Contractor("Accenture"), new Contractor("Capgemini")};
+	
 	Employee a = new Employee(Employee.getEmployeeCount() + 1, "abc", "def", 2000, 'a', "01/01/2017");
 	Employee.printTotalEmpoyee();
 	Employee b = new Employee(Employee.getEmployeeCount() + 1, "abc", "def", 2000, 'a', "01/01/2017");
@@ -15,7 +17,7 @@ public class Main
 	Employee.printTotalEmpoyee();
 
 	Employee g = new ContractEmployee(Employee.getEmployeeCount() + 1, "abc", "def", 8.75, 8, 'a', "01/01/2017",
-		"Accenture");
+		listOfContractor[0]);
 	ContractEmployee.printTotalConEmpoyee();
 
 	Employee e = new PermanentEmployee(Employee.getEmployeeCount() + 1, "abc", "def", 2000, 'a', "01/01/2017");
@@ -25,8 +27,11 @@ public class Main
 	PermanentEmployee.printTotalPermEmpoyee();
 
 	Employee h = new ContractEmployee(Employee.getEmployeeCount() + 1, "abc", "def", 8.75, 8, 'a', "01/01/2017",
-		"Capgemini");
+		listOfContractor[1]);
 	ContractEmployee.printTotalConEmpoyee();
+
+	
+	
     }
 
 }

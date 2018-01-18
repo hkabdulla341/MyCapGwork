@@ -15,12 +15,12 @@ public class Employee
     {
 	incrementNum();
     }
-    
+
     public Employee()
     {
 	// Default constructor
     }
-    
+
     public Employee(int employeeID, String firstName, String lastName, double salary, char grade, String joiningDate)
     {
 	this.employeeID = employeeID;
@@ -28,28 +28,28 @@ public class Employee
 	this.lastName = lastName;
 	this.salary = salary;
 	this.grade = grade;
-	
+
 	setJoiningDate(joiningDate);
 	this.joiningDate = getJoiningDate();
     }
-    
+
     public Employee(int employeeID, String firstName, String lastName)
     {
 	this.employeeID = employeeID;
 	this.firstName = firstName;
 	this.lastName = lastName;
     }
-    
+
     private static void incrementNum()
     {
 	employeeCount++;
     }
-    
+
     public static int getEmployeeCount()
     {
 	return employeeCount;
     }
-    
+
     public static void printTotalEmpoyee()
     {
 	System.out.println("Total employee created : " + getEmployeeCount());
@@ -57,70 +57,68 @@ public class Employee
 
     public int getEmployeeID()
     {
-        return employeeID;
+	return employeeID;
     }
 
     public void setEmployeeID(int employeeID)
     {
-        this.employeeID = employeeID;
+	this.employeeID = employeeID;
     }
 
     public String getFirstName()
     {
-        return firstName;
+	return firstName;
     }
 
     public void setFirstName(String firstName)
     {
-        this.firstName = firstName;
+	this.firstName = firstName;
     }
 
     public String getLastName()
     {
-        return lastName;
+	return lastName;
     }
 
     public void setLastName(String lastName)
     {
-        this.lastName = lastName;
+	this.lastName = lastName;
     }
 
     public double getSalary()
     {
-        return salary;
+	return salary;
     }
 
     public void setSalary(double salary)
     {
-        this.salary = salary;
+	this.salary = salary;
     }
 
     public char getGrade()
     {
-        return grade;
+	return grade;
     }
 
     public void setGrade(char grade)
     {
-        this.grade = grade;
+	this.grade = grade;
     }
 
     public Date getJoiningDate()
     {
-        return joiningDate;
+	return joiningDate;
     }
 
     public void setJoiningDate(String joiningDate)
     {
 	Date setD = DateModder.getDate(joiningDate);
-        this.joiningDate = setD;
+	this.joiningDate = setD;
     }
-    
+
     @Override
     public String toString()
     {
-        return employeeID + ") " + firstName + " " + lastName + " - $" + salary + " - " + grade + " - " + joiningDate;
+	return employeeID + ") " + firstName + " " + lastName + " - $" + salary + " - " + grade + " - " + joiningDate;
     }
-    
-    
 }
