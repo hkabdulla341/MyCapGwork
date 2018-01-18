@@ -3,6 +3,8 @@ import com.cg.specs.Pet;
 
 public class Cat extends Feline implements Pet
 {
+    int MAX = 13;
+    
     public Cat()
     {
 	System.out.println("Initialize Cat Obj ...");
