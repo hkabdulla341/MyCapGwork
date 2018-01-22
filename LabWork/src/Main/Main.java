@@ -1,5 +1,7 @@
 package Main;
 
+import com.sun.security.auth.callback.TextCallbackHandler;
+
 import Main.Contractor.ContractEmployee;
 
 public class Main
@@ -9,23 +11,28 @@ public class Main
     {
 	Contractor aContractor = new Contractor(8.5);
 	
-	ContractEmployee a = aContractor.new TechAssoicateContract(Employee.getEmployeeCount() + 1, "abc", "abc", 'a', 10, "01/01/2017");
+	ContractEmployee a = aContractor.new TechAssoicateContract(Employee.getEmployeeCount() + 1, "abc", "abc", 'a', 40, "01/01/2017");
 	aContractor.addContractEmployee(a);
 	System.out.println("Total Contract employee created : " + Contractor.getNumberOfContrEmployee());
 	
-	ContractEmployee b = aContractor.new TechAssoicateContract(Employee.getEmployeeCount() + 1, "def", "def", 'a', 12, "01/01/2017");
+	ContractEmployee b = aContractor.new TechAssoicateContract(Employee.getEmployeeCount() + 1, "def", "def", 'a', 42, "01/01/2017");
 	aContractor.addContractEmployee(b);
 	System.out.println("Total Contract employee created : " + Contractor.getNumberOfContrEmployee());
 	
-	ContractEmployee c = aContractor.new TechAssoicateContract(Employee.getEmployeeCount() + 1, "ghi", "ghi", 'a', 15, "01/01/2017");
+	ContractEmployee c = aContractor.new TechAssoicateContract(Employee.getEmployeeCount() + 1, "ghi", "ghi", 'a', 45, "01/01/2017");
 	aContractor.addContractEmployee(c);
 	System.out.println("Total Contract employee created : " + Contractor.getNumberOfContrEmployee());
+	
+	PermanentEmployee perm = new ProjectManager(Employee.getEmployeeCount() + 1, "abc", "def", 3, 'v', "06/06/2016");
+	PermanentEmployee perm2 = new TechAssoicatePerm(Employee.getEmployeeCount() + 1, "abc", "def", 3, 5, 'v', "06/06/2016");
 	
 	System.out.println();
 	System.out.println(aContractor.toString());
 	
-	
-	
+	System.out.println("PM with 3yr exp : " + perm.getSalary());
+	System.out.println("TechAssoPerm with 3 years & 5 certs : " + perm2.getSalary());
+	System.out.println(aContractor.listOfContractor[0].getSalary());
+		
 	
 //	Employee listOfEmployees[] = new Employee[8];
 //

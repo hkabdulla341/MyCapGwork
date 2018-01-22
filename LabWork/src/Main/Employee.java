@@ -2,7 +2,7 @@ package Main;
 
 import java.util.*;
 
-public class Employee
+public class Employee implements Certification
 {
     private int employeeID; // auto-generated
     private String firstName;
@@ -11,6 +11,7 @@ public class Employee
     private char grade; // assumption A,B,C,..,Z
     private Date joiningDate;
     public static int employeeCount = 0;
+    private Certification [] myCerts;
 
     {
 	incrementNum();
@@ -129,5 +130,11 @@ public class Employee
     public String getFullName()
     {
 	return getFirstName() + " " + getLastName();
+    }
+    
+    @Override
+    public Certification[] getAllCertification()
+    {
+        return this.myCerts;
     }
 }
