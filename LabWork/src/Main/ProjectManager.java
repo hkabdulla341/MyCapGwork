@@ -2,7 +2,6 @@ package Main;
 
 public class ProjectManager extends PermanentEmployee
 {
-    private MediclaimCoverage mediPerk;
     private int noOfExp;
     private static int PM_EXP_SALARY_MULTIPLIER = 10000;
     
@@ -14,12 +13,7 @@ public class ProjectManager extends PermanentEmployee
 	this.noOfExp = noOfExp;
 	super.setSalary(PM_EXP_SALARY_MULTIPLIER * this.noOfExp);
 	
-	this.mediPerk = new MediclaimCoverage(super.getSalary(), 100);
-    }
-    
-    public double getMediPerk()
-    {
-	return mediPerk.getMediCoverage();
+	super.setMediPerk(new MediclaimCoverage(super.getSalary(), 100));
     }
     
     public int getNoOfExp()

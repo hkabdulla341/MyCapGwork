@@ -2,6 +2,7 @@ package Main;
 
 public abstract class PermanentEmployee extends Employee
 {
+    private MediclaimCoverage mediPerk;
     private static int numberOfPermEmployee = 0;
 
     {
@@ -32,6 +33,16 @@ public abstract class PermanentEmployee extends Employee
     public static int getNumberOfPermEmployee()
     {
 	return numberOfPermEmployee;
+    }
+    
+    public void setMediPerk(MediclaimCoverage mediPerk)
+    {
+	this.mediPerk = mediPerk;
+    }
+    
+    public MediclaimCoverage getMediPerk()
+    {
+	return mediPerk;
     }
 
     public static void printTotalPermEmpoyee()

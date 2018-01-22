@@ -2,7 +2,6 @@ package Main;
 
 public class TechAssoicatePerm extends PermanentEmployee
 {
-    private MediclaimCoverage mediPerk;
     private int noOfTechCerts;
     private int noOfYears;
     private static final int TECH_CERT_MULTIPLIER = 5000;
@@ -17,12 +16,7 @@ public class TechAssoicatePerm extends PermanentEmployee
 	this.noOfYears = noOfYears;
 	super.setSalary((TECH_CERT_MULTIPLIER * this.noOfTechCerts) + (TECH_EXP_MULTIPLIER * this.noOfYears));
 
-	this.mediPerk = new MediclaimCoverage(super.getSalary(), 200);
-    }
-
-    public double getMediPerk()
-    {
-	return mediPerk.getMediCoverage();
+	super.setMediPerk(new MediclaimCoverage(super.getSalary(), 200));
     }
 
     public String getDesignation()

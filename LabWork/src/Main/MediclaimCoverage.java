@@ -2,15 +2,15 @@ package Main;
 
 public class MediclaimCoverage
 {
-    private double mediCoverage;
+    private double mediCoverageValue;
 
     public MediclaimCoverage(double salary, double percent)
     {
-	this.mediCoverage = (salary)*(percent/100);
+	this.mediCoverageValue = (salary)*(percent/100);
     }
     
     public double getMediCoverage()
     {
-	return mediCoverage;
+	return mediCoverageValue;
     }
 }
