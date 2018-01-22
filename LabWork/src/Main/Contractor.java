@@ -66,13 +66,13 @@ public class Contractor
 	{
 	    super(employeeID, firstName, lastName, grade, joiningDate);
 
-	    if (noOfHrWorked >= 40)
+	    if (noOfHrWorked <= 40)
 	    {
 		super.setSalary(ratePerHr * noOfHrWorked);
 	    }
 	    else if (noOfHrWorked > 40)
 	    {
-		super.setSalary(40 * ratePerHr + (noOfHrWorked-40)*ratePerHr*2);
+		super.setSalary((40 * ratePerHr) + ((noOfHrWorked-40)*ratePerHr*2));
 	    }
 	}
     }
