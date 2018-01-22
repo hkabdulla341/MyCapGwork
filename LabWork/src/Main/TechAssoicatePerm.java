@@ -1,26 +1,41 @@
 package Main;
 
-public class TechAssoicatePerm extends PermanentEmployee implements TwoHundredMediclaim
+public class TechAssoicatePerm extends PermanentEmployee
 {
-
-    public TechAssoicatePerm()
+    private MediclaimCoverage mediPerk;
+    private int noOfTechCerts;
+    private int noOfYears;
+    
+    public TechAssoicatePerm(int employeeID, String firstName, String lastName, int noOfTechCerts, 
+	    int noOfYears , char grade, String joiningDate)
     {
+	super(employeeID, firstName, lastName, grade, joiningDate);
+	
+	this.noOfTechCerts = noOfTechCerts;
+	this.noOfYears = noOfYears;
+	super.setSalary((5000*this.noOfTechCerts) + (1000*this.noOfYears));
+	
+	this.mediPerk = new MediclaimCoverage(super.getSalary(), 200);
     }
-
-    public TechAssoicatePerm(int employeeID, String firstName, String lastName, double salary, char grade,
-	    String joiningDate)
+    
+    public double getMediPerk()
     {
-	super(employeeID, firstName, lastName, salary, grade, joiningDate);
+	return mediPerk.getMediCoverage();
     }
-
-    public TechAssoicatePerm(int employeeID, String firstName, String lastName)
+    
+    public String getDesignation()
     {
-	super(employeeID, firstName, lastName);
+	return "TA-P";
     }
-
-    @Override
-    public double get200Mediclaim()
+    
+    public int getNoOfYears()
     {
-	return (getSalary()*12) * 2;
+	return noOfYears;
+    }
+    
+    public String toString()
+    {
+        return "Emp Id : " + super.getEmployeeID() + ") " + "Full Name : "  + super.getFullName() 
+        + "Designation : " + this.getDesignation();
     }
 }

@@ -33,11 +33,15 @@ public class Employee
 	this.joiningDate = getJoiningDate();
     }
 
-    public Employee(int employeeID, String firstName, String lastName)
+    public Employee(int employeeID, String firstName, String lastName, char grade, String joiningDate)
     {
 	this.employeeID = employeeID;
 	this.firstName = firstName;
 	this.lastName = lastName;
+	this.grade = grade;
+	
+	setJoiningDate(joiningDate);
+	this.joiningDate = getJoiningDate();
     }
 
     private static void incrementNum()
@@ -120,5 +124,10 @@ public class Employee
     public String toString()
     {
 	return employeeID + ") " + firstName + " " + lastName + " - $" + salary + " - " + grade + " - " + joiningDate;
+    }
+    
+    public String getFullName()
+    {
+	return getFirstName() + " " + getLastName();
     }
 }

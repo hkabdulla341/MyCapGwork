@@ -1,6 +1,6 @@
 package Main;
 
-public class PermanentEmployee extends Employee
+public abstract class PermanentEmployee extends Employee
 {
     private static int numberOfPermEmployee = 0;
 
@@ -24,9 +24,9 @@ public class PermanentEmployee extends Employee
 	super(employeeID, firstName, lastName, salary, grade, joiningDate);
     }
 
-    public PermanentEmployee(int employeeID, String firstName, String lastName)
+    public PermanentEmployee (int employeeID, String firstName, String lastName, char grade, String joiningDate)
     {
-	super(employeeID, firstName, lastName);
+	super(employeeID, firstName, lastName, grade, joiningDate);
     }
     
     public static int getNumberOfPermEmployee()
