@@ -36,11 +36,6 @@ public class Begin
 		{
 		    try
 		    {
-			if (primeNum > 6762 && primeNum < 6765)
-			{
-			    int a = 0;
-			}
-
 			if (fiboNum == primeNum)
 			{
 			    System.out.println(fiboNum);
@@ -66,12 +61,12 @@ public class Begin
 	    catch (IOException e)
 	    {
 		// TODO Auto-generated catch block
-		e.printStackTrace();
+//		e.printStackTrace();
 	    }
 	}
 	catch (Exception e)
 	{
-	    e.printStackTrace();
+//	    e.printStackTrace();
 	}
 
     }
