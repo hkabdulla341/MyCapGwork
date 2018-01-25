@@ -1,9 +1,11 @@
 package MyChatPkg;
 
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 
 public class MyChatServer
 {
@@ -13,6 +15,7 @@ public class MyChatServer
 	ServerSocket server_socket = null;
 	Socket client_socket = null;
 	InputStream in = null;
+	OutputStream out = null;
 
 	try
 	{
@@ -25,6 +28,7 @@ public class MyChatServer
 	    System.out.println("Client connected...");
 
 	    in = client_socket.getInputStream();
+	    out = client_socket.getOutputStream();
 
 	    String message = "";
 
