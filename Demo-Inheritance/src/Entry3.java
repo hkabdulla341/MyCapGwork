@@ -10,6 +10,32 @@ public class Entry3 {
 		petRef.play();
 		
 		System.out.println(Pet.MAX);
+		
+		Dog aDog = new Dog();
+		
+		System.out.println(aDog.toString());
+		
+		try
+		{
+		    Dog bDog = (Dog) aDog.clone();
+		    System.out.println(bDog.toString());
+		}
+		catch (CloneNotSupportedException e)
+		{
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
+		
+		try
+		{
+		    Pet cDog = (Pet)aDog.clone();
+		    System.out.println(cDog.toString());
+		}
+		catch (CloneNotSupportedException e)
+		{
+		    // TODO Auto-generated catch block
+		    e.printStackTrace();
+		}
 	}
 	
 	
