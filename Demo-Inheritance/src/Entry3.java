@@ -18,7 +18,8 @@ public class Entry3 {
 		try
 		{
 		    Dog bDog = (Dog) aDog.clone();
-		    System.out.println(bDog.toString());
+		    System.out.println(aDog.equals(bDog));
+		    System.out.println(aDog == (bDog));
 		}
 		catch (CloneNotSupportedException e)
 		{
@@ -29,7 +30,8 @@ public class Entry3 {
 		try
 		{
 		    Pet cDog = (Pet)aDog.clone();
-		    System.out.println(cDog.toString());
+		    System.out.println(aDog.equals(cDog));
+		    System.out.println(aDog == (cDog));
 		}
 		catch (CloneNotSupportedException e)
 		{
