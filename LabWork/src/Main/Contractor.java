@@ -1,17 +1,22 @@
 package Main;
 
+import java.util.ArrayList;
+
 public class Contractor
 {
-    final int MAX_COUNT = 3;
+    //final int MAX_COUNT = 3;
     private static int numberOfContrEmployee = 0;
     private static int currInsert = 0;
     private double ratePerHr;
-    ContractEmployee[] listOfContractor = new ContractEmployee[MAX_COUNT];
+    //ContractEmployee[] listOfContractor = new ContractEmployee[MAX_COUNT];
 
+    ArrayList<ContractEmployee> listOfContractor;
+    
     public Contractor(double ratePerHr)
     {
 	super();
 	this.ratePerHr = ratePerHr;
+	listOfContractor = new ArrayList<>();
     }
 
     public void incrementContEmpCount()
@@ -21,11 +26,13 @@ public class Contractor
 
     public void addContractEmployee(ContractEmployee aConEmp)
     {
-	if (currInsert < MAX_COUNT)
-	{
-	    listOfContractor[numberOfContrEmployee - 1] = aConEmp;
-	    ++currInsert;
-	}
+//	if (currInsert < MAX_COUNT)
+//	{
+//	    listOfContractor[numberOfContrEmployee - 1] = aConEmp;
+//	    ++currInsert;
+//	}
+	
+	listOfContractor.add(aConEmp);
     }
     
     @Override
@@ -33,9 +40,14 @@ public class Contractor
     {
         String temp = "";
         
-        for(int i = 0; i < MAX_COUNT; i++)
+//        for(int i = 0; i < MAX_COUNT; i++)
+//        {
+//            temp += listOfContractor[i].toString() + "\n";
+//        }
+
+        for(ContractEmployee aConEmp : listOfContractor)
         {
-            temp += listOfContractor[i].toString() + "\n";
+            temp += aConEmp.toString() + "\n";
         }
         
         return temp;

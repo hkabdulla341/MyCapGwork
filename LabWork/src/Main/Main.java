@@ -31,7 +31,8 @@ public class Main
 	
 	System.out.println("PM with 3yr exp : " + perm.getSalary());
 	System.out.println("TechAssoPerm with 3 years & 5 certs : " + perm2.getSalary());
-	System.out.println(aContractor.listOfContractor[0].getSalary());
+//	System.out.println(aContractor.listOfContractor[0].getSalary());
+	System.out.println(aContractor.listOfContractor.get(0).getSalary());
 		
 	
 //	Employee listOfEmployees[] = new Employee[8];
