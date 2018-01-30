@@ -5,6 +5,20 @@ public class MainClass
 {
     public static void main(String[] args)
     {
+	
+	Integer iNum = new Integer(1);
+	Double dnum = new Double(10.0);
+	
+	int iNumHC = iNum.hashCode();
+	
+	System.out.println(iNumHC);
+	
+	iNumHC = iNum.hashCode(100);
+	
+	System.out.println(iNumHC);
+	
+	String str = new String();
+	
 	Product productA = new Product(2, "Cash", 50);
 	Product productB = new Product(1, "Pen", 3.5);
 	Product productC = new Product(3, "Apple Mobile", 1550);
@@ -44,5 +58,7 @@ public class MainClass
 	    System.out.println(aProduct.toString());
 	}
 	System.out.println();
+	
+	
     }
 }
