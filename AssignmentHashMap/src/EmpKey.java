@@ -24,6 +24,6 @@ public class EmpKey
     @Override
     public int hashCode()
     {
-	return this.key;
+	return this.suffix.hashCode() + this.key;
     }
 }
