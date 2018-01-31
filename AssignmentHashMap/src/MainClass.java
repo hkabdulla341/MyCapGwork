@@ -1,5 +1,6 @@
 import java.util.HashMap;
 import java.util.Map;
+import static java.lang.Integer.*;
 
 public class MainClass
 {
@@ -7,9 +8,7 @@ public class MainClass
     public static void main(String[] args)
     {
 	Map <EmpKey, Employee> employeeMap = new HashMap<EmpKey, Employee>();
-	
-	
-	
+
 	Employee empA =  new Employee(1, "abc", "def", 'a',"01/01/2019");
 	Employee empB =  new Employee(2, "abc", "def", 'a',"01/01/2019");
 	Employee empC =  new Employee(3, "abc", "def", 'a',"01/01/2019");
