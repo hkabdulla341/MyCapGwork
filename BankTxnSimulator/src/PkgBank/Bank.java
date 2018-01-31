@@ -11,7 +11,8 @@ public class Bank
 
     public void transferAmount(int toAccount, int fromAccount, double amount)
     {
-//	System.out.println("Sending from acct " + fromAccount + " to acct " + toAccount + " amount : " + amount);
+	// System.out.println("Sending from acct " + fromAccount + " to acct " +
+	// toAccount + " amount : " + amount);
 
 	int toAccLoc = -1;
 	int fromAccLoc = -1;
@@ -30,9 +31,20 @@ public class Bank
 	    }
 	}
 
+	try
+	{
+	}
+	finally
+	{
+
+	}
+
 	if (allAccounts[fromAccLoc].withdraw(amount) == true)
 	{
-	    allAccounts[toAccLoc].deposit(amount);
+	    if (allAccounts[toAccLoc].deposit(amount) == false)
+	    {
+		allAccounts[fromAccLoc].deposit(amount);
+	    }
 	}
     }
 

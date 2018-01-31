@@ -1,9 +1,16 @@
 package PkgBank;
 
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+
 public class Account
 {
     private int id;
     private double balance;
+    
+    Lock aLock = new ReentrantLock();
+    Condition insufficentBal = aLock.newCondition();
 
     public Account(int id, double balance)
     {
