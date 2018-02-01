@@ -1,7 +1,9 @@
 package MainPkg;
 
-class Temp
+class Temp implements NewInterface
 {
+    
+    
     public static void main(String[] args)
     {
 	String str2 = "abc";
@@ -49,5 +51,19 @@ class Temp
 
 	System.out.println((ca[0] == ca[1]) + " " + (ca[0] == ca[2]));
 
+    }
+
+    @Override
+    public int run1()
+    {
+	// TODO Auto-generated method stub
+	return 0;
+    }
+
+    @Override
+    public int run0()
+    {
+	// TODO Auto-generated method stub
+	return 0;
     }
 }
