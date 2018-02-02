@@ -50,4 +50,9 @@ public class EmployeeServiceImpl implements IEmployeeService
     {
 	return this.daoEmploylist.daoKinIdExists(currKinID);
     }
+    
+    public boolean serviceEmailIdCheckExists(String eMailID)
+    {
+	return this.daoEmploylist.daoEmailIdExists(eMailID);
+    }
 }

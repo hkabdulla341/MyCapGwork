@@ -5,26 +5,36 @@ public class Validate
     public static boolean validateName(String name)
     {
 	final String REGEX = "(?i)^(?:[a-z]+(?: |\\. ?)?)+[a-z]$";
-	
+
 	return name.matches(REGEX);
     }
 
-    public static boolean validateKin(String name)
+    public static boolean validateKin(String kinID)
     {
 	return true;
     }
 
-    public static boolean validatePhoneNo(String name)
+    public static boolean validatePhoneNo(String num)
     {
-	return true;
+	try
+	{
+	    Integer.parseInt(num);
+	    return true;
+	}
+	catch (NumberFormatException e)
+	{
+	    return false;
+	}
     }
 
-    public static boolean validateEmailID(String name)
+    public static boolean validateEmailID(String eMail)
     {
-	return true;
+	final String REGEX = "^([\\w-\\.]+){1,64}@([\\w&&[^_]]+){2,255}.[a-z]{2,}$";
+
+	return eMail.matches(REGEX);
     }
 
-    public static boolean validateDate(String name)
+    public static boolean validateDate(String Date)
     {
 	return true; // use RegEx
     }

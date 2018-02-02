@@ -32,16 +32,45 @@ public class UserInteraction
 	    }
 	}
 	
-	String kinId = Keyboard.readString("Enter Employee Name : ");
+	String kinId = Keyboard.readString("Enter Employee KIN Id : ");
 	
-	while(!serivceEmployeeList.serviceKinIdCheckExists(kinId))
+	while(serivceEmployeeList.serviceKinIdCheckExists(kinId))
 	{
-	    if(!serivceEmployeeList.serviceKinIdCheckExists(kinId))
+	    if(serivceEmployeeList.serviceKinIdCheckExists(kinId))
 	    {
-		System.out.println("KinID Already Exists...");
-		kinId = Keyboard.readString("Enter Employee Name : ");
+		System.out.print("KinID Already Exists...");
+		kinId = Keyboard.readString("Enter Employee KIN Id : ");
 	    }
 	}
+	
+	String eMail = Keyboard.readString("Enter Employee email : ");
+	
+	while(!Validate.validateEmailID(eMail))
+	{
+	    if(!Validate.validateEmailID(eMail))
+	    {
+		System.out.print("Invalid Email format...");
+		eMail = Keyboard.readString("Enter Employee email : ");
+	    }
+	    else if(serivceEmployeeList.serviceEmailIdCheckExists(eMail))
+	    {
+		System.out.print("Email Already Exists...");
+		eMail = Keyboard.readString("Enter Employee email : ");
+	    }
+	}
+	
+	String phoneNo = Keyboard.readString("Enter Phone Number : ");
+	
+	while(!Validate.validatePhoneNo(phoneNo))
+	{
+	    if(!Validate.validatePhoneNo(phoneNo))
+	    {
+		System.out.print("Invalid phone number...");
+		phoneNo = Keyboard.readString("Enter Phone Number : ");
+	    }
+	}
+	
+	String address = Keyboard.readString("Enter Address : ");
 	
     }
 

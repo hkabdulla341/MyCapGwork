@@ -56,6 +56,11 @@ public class EmployeeDaoImplForList implements IemployeeDao
    
     public boolean daoKinIdExists(String currKinID)
     {
-	return true;
+	return false;
+    }
+
+    public boolean daoEmailIdExists(String currKinID)
+    {
+	return false;
     }
 }
