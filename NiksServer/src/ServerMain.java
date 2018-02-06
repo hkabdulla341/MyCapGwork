@@ -7,6 +7,8 @@ import java.net.Socket;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import org.omg.CORBA.Environment;
+
 public class ServerMain
 {
 
@@ -74,7 +76,16 @@ public class ServerMain
 		OutputStreamWriter iWriter = new OutputStreamWriter(s.getOutputStream());
 		BufferedWriter sendToServer = new BufferedWriter(iWriter);
 
-		sendToServer.write(toSend + "\n");
+		
+		String responseLine = "HTTP/1.1 200 OK";
+		responseLine += "Connection : Close";
+		responseLine += "Content-Type:text/html";
+		
+		String html = System.getProperty("line.separator") + "<html><body>Hello World!!</body></html>";
+		
+		responseLine += html;
+		
+		sendToServer.write(responseLine + "\n");
 		sendToServer.flush();
 	    }
 
