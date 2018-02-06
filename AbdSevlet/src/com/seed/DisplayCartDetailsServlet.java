@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 //	TODO:1 Make DisplayCartDetailsServlet as a HttpServlet
 
+@SuppressWarnings("serial")
 @WebServlet(value ="/displayDetails")
 public class DisplayCartDetailsServlet extends HttpServlet{
 
@@ -38,6 +39,11 @@ public class DisplayCartDetailsServlet extends HttpServlet{
 	out.write(output);
 	
     }    	
+    
+    @Override
+        protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+        {
+        }
 }
 
 
