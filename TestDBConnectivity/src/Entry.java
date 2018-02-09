@@ -33,7 +33,7 @@ public class Entry
 	// TODO Getting the result
 	ResultSet rs = stmt.executeQuery("select * from employees");
 
-	while (rs.next()) 
+	while (rs.next())  
 	{
 	    System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3) + "  " + rs.getString(4)
 		    + " " + rs.getString(5) + " " + rs.getDate(6) + "  " + rs.getString(7) + " " + rs.getDouble(8) + " "
