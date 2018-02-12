@@ -25,13 +25,15 @@ public class Entry2
 	Statement stmt = dbConnection.createStatement();
 
 	// TODO Getting the result
-	ResultSet rs = stmt.executeQuery("select * from city where id = 88");
+	ResultSet rs = stmt.executeQuery("select * from city where id = 88"); //315432
+	
+	stmt.execute("Update city set id = 10000 where id = 88");
 
-	while (rs.next())
-	{
-	    System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3) + "  " + rs.getString(4)
-		    + " " + rs.getInt(5) + System.lineSeparator());
-	}
+//	while (rs.next())
+//	{
+//	    System.out.println(rs.getInt(1) + "  " + rs.getString(2) + "  " + rs.getString(3) + "  " + rs.getString(4)
+//		    + " " + rs.getInt(5) + System.lineSeparator());
+//	}
 
     }
 

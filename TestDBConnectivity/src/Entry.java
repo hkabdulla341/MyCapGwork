@@ -28,7 +28,7 @@ public class Entry
 
 	// TODO CREATE STATEMENT TO EXECUTE A QUERY (?????)
 
-	Statement stmt = dbConnection.createStatement();
+	Statement stmt = dbConnection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
 	// TODO Getting the result
 	ResultSet rs = stmt.executeQuery("select * from employees");
